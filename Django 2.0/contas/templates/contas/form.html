@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="POST">
+    {%csrf_token%} <!-- protege contra alteracao, evitando que alguem injete informacoes desnecessarias-->
+
+    {{form.as_p}}
+
+    <button type="submit">Salvar</button>
+    {% if transacao %}
+        <a href="{% url 'url_delete' transacao.id %}">Remover</a>
+    {% endif %}
+
+</form>
+
+</body>
+</html>
