@@ -1,0 +1,2 @@
+django-admin startproject = inicia projeto
+django-admin startproject . = inicia o projeto sem subpasta
